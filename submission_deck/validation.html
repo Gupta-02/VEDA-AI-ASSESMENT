@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Roboto+Slab:wght@800;900&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;box-sizing:border-box}
+    .slide-container{width:1280px;min-height:720px;background:#e2e8f0;color:#1e293b;font-family:'DM Sans',sans-serif;position:relative;padding-top:62px}
+    .holes{position:absolute;top:30px;left:42px;right:42px;display:flex;justify-content:space-between}.hole{width:18px;height:18px;border:2px solid #1e293b;border-radius:50%;background:#e2e8f0}
+    .left{position:absolute;left:82px;top:125px;width:370px}.kicker{font-size:14px;font-weight:700;letter-spacing:1.8px;color:#dc2626}.left h1{font-family:'Roboto Slab',serif;font-size:42px;line-height:1.12;letter-spacing:-1.5px;margin-top:14px}.rule{height:7px;width:104px;background:#dc2626;margin-top:25px}.left p{font-size:18px;line-height:1.45;color:#475569;margin-top:22px}.stamp{margin-top:42px;width:220px;border:2px solid #1e293b;background:#f8fafc;box-shadow:5px 5px 0 #1e293b;padding:15px 17px}.stamp strong{display:block;color:#dc2626;font-size:13px;letter-spacing:1px}.stamp span{display:block;margin-top:5px;font-size:17px;font-weight:700}
+    .ledger{position:absolute;left:520px;top:110px;width:675px;border-top:6px solid #1e293b}.ledger-head{display:grid;grid-template-columns:85px 210px 1fr;border-left:2px solid #1e293b;border-right:2px solid #1e293b;border-bottom:2px solid #1e293b;background:#1e293b;color:#f8fafc;font-size:12px;font-weight:700;letter-spacing:1px;padding-top:13px;height:46px}.ledger-head span{padding-left:14px}.row{display:grid;grid-template-columns:85px 210px 1fr;min-height:102px;border-left:2px solid #1e293b;border-right:2px solid #1e293b;border-bottom:2px solid #1e293b;background:#f8fafc}.status{display:flex;align-items:center;justify-content:center;border-right:2px solid #1e293b;color:#dc2626;font-family:'Roboto Slab',serif;font-size:23px}.area{border-right:2px solid #1e293b;padding:20px 15px;font-size:17px;font-weight:700}.evidence{padding:18px 18px;font-size:14px;line-height:1.36;color:#475569}.evidence b{color:#1e293b}.conclusion{position:absolute;left:82px;right:82px;bottom:42px;border-top:2px solid #1e293b;padding-top:16px;display:flex;justify-content:space-between;font-size:17px}.conclusion strong{color:#dc2626}.page{position:absolute;right:82px;bottom:16px;font-size:13px;color:#64748b}
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="holes"><span class="hole"></span><span class="hole"></span><span class="hole"></span></div>
+    <section class="left">
+      <div class="kicker">Submission readiness</div>
+      <h1>Validation covers interaction and persistence</h1>
+      <div class="rule"></div>
+      <p>The final review checked the teacher workflow across the core visual states and the browser-owned persistence path.</p>
+      <div class="stamp"><strong>CHECK STATUS</strong><span>Build &amp; tests passed</span></div>
+    </section>
+    <section class="ledger">
+      <div class="ledger-head"><span>STATUS</span><span>AREA</span><span>VERIFIED OUTCOME</span></div>
+      <div class="row"><div class="status">✓</div><div class="area">Teacher flow</div><div class="evidence"><b>Upload → Extracting → Mapping</b> completed with populated document cards and the intended transition state.</div></div>
+      <div class="row"><div class="status">✓</div><div class="area">Evidence mapping</div><div class="evidence">Selecting labelled sub-part <b>11 (a)</b> updates the selected row, answer context, and exact green page region.</div></div>
+      <div class="row"><div class="status">✓</div><div class="area">Persistence</div><div class="evidence">Saved assessments reappear after refresh in <b>My Library</b>; reopening restores the last selected evidence focus.</div></div>
+      <div class="row"><div class="status">✓</div><div class="area">Engineering</div><div class="evidence"><b>Type checking, unit tests, production build,</b> and desktop/mobile visual checks completed successfully.</div></div>
+    </section>
+    <div class="conclusion"><span><strong>Result:</strong> the interactive prototype is ready for a product-focused submission review.</span><span>Live OCR remains a documented next integration.</span></div>
+    <div class="page">08 / 09</div>
+  </div>
+</body>
+</html>

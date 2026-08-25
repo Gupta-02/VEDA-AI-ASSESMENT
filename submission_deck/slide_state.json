@@ -1,0 +1,111 @@
+{
+  "project_info": {
+    "title": "Veda AI — Assessment Extraction & Answer Mapping",
+    "created": 1787679088.806,
+    "last_updated": 1787679305.618,
+    "total_slides": 9
+  },
+  "slides": [
+    {
+      "id": "cover",
+      "state": "edited",
+      "pageNum": 1
+    },
+    {
+      "id": "problem",
+      "state": "edited",
+      "pageNum": 2
+    },
+    {
+      "id": "workflow",
+      "state": "edited",
+      "pageNum": 3
+    },
+    {
+      "id": "figma_states",
+      "state": "edited",
+      "pageNum": 4
+    },
+    {
+      "id": "edge_cases",
+      "state": "edited",
+      "pageNum": 5
+    },
+    {
+      "id": "architecture",
+      "state": "edited",
+      "pageNum": 6
+    },
+    {
+      "id": "data_model",
+      "state": "edited",
+      "pageNum": 7
+    },
+    {
+      "id": "validation",
+      "state": "edited",
+      "pageNum": 8
+    },
+    {
+      "id": "closing",
+      "state": "edited",
+      "pageNum": 9
+    }
+  ],
+  "outline": [
+    {
+      "id": "cover",
+      "title": "Veda AI — Assessment Extraction & Answer Mapping",
+      "summary": "Hiring-assignment submission cover presenting the teacher assessment workspace.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "problem",
+      "title": "Make handwritten assessment evidence navigable",
+      "summary": "The teacher problem, the evidence-first goal, and the assignment context.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "workflow",
+      "title": "One flow turns papers into review decisions",
+      "summary": "The end-to-end upload, extraction, mapping, and teacher review flow.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "figma_states",
+      "title": "Figma-aligned states keep the workflow familiar",
+      "summary": "The empty upload, uploaded-file, extraction, and mapping states inspired by the reference.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "edge_cases",
+      "title": "Mapping handles the assessment edge cases",
+      "summary": "Question order, sub-parts, unanswered work, unmatched answers, and multi-page context.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "architecture",
+      "title": "Typed architecture separates interface, API, and data",
+      "summary": "React frontend, typed tRPC API, MySQL persistence, and no-login browser ownership.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "data_model",
+      "title": "The data model preserves the review trail",
+      "summary": "Session, question, answer-region, and review-event persistence design.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "validation",
+      "title": "Validation covers interaction and persistence",
+      "summary": "Completed functional checks, tests, build, and responsive verification.",
+      "image_plan": "Use a suitable image if needed"
+    },
+    {
+      "id": "closing",
+      "title": "Ready as a complete interaction prototype",
+      "summary": "Final scope statement, transparent limitations, and next implementation step.",
+      "image_plan": "Use a suitable image if needed"
+    }
+  ]
+}

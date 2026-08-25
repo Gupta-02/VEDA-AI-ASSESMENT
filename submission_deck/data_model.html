@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Roboto+Slab:wght@800;900&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;box-sizing:border-box}
+    .slide-container{width:1280px;min-height:720px;background:#e2e8f0;color:#1e293b;font-family:'DM Sans',sans-serif;position:relative;padding-top:60px}
+    .holes{position:absolute;top:30px;left:42px;right:42px;display:flex;justify-content:space-between}.hole{width:18px;height:18px;border:2px solid #1e293b;border-radius:50%;background:#e2e8f0}
+    .head{margin-left:82px;width:1116px;display:flex;justify-content:space-between;align-items:flex-end}.kicker{font-size:14px;font-weight:700;letter-spacing:1.7px;color:#dc2626}.head h1{font-family:'Roboto Slab',serif;font-size:39px;letter-spacing:-1.5px;margin-top:10px}.head p{width:355px;color:#475569;font-size:15px;line-height:1.42}.rule{height:6px;width:1116px;background:#dc2626;margin:24px auto 0}
+    .model{position:relative;width:1116px;height:335px;margin:46px auto 0;display:flex;align-items:center;justify-content:space-between}.link{position:absolute;top:157px;height:3px;background:#64748b;z-index:0}.l1{left:208px;width:104px}.l2{left:500px;width:104px}.l3{left:792px;width:104px}.arrow{position:absolute;top:144px;color:#dc2626;font-size:28px;font-weight:700;z-index:2}.a1{left:281px}.a2{left:573px}.a3{left:865px}
+    .entity{position:relative;z-index:1;width:224px;height:280px;border:2px solid #1e293b;background:#f8fafc;box-shadow:5px 5px 0 #1e293b}.entity-head{height:66px;background:#1e293b;color:#fff;padding:15px 16px}.entity-head span{display:block;font-size:10px;font-weight:700;letter-spacing:1.2px;color:#fca5a5}.entity-head h2{font-family:'Roboto Slab',serif;font-size:18px;line-height:1.05;margin-top:4px}.fields{padding:16px}.field{border-top:1px solid #cbd5e1;padding-top:9px;margin-top:9px;font-size:12px;line-height:1.25}.field:first-child{border-top:0;padding-top:0;margin-top:0}.field strong{font-size:12px}.field span{display:block;color:#64748b;margin-top:2px;font-size:10px}.relationship{position:absolute;top:305px;color:#64748b;font-size:11px;font-weight:700;letter-spacing:.2px}.r1{left:229px}.r2{left:524px}.r3{left:815px}
+    .takeaway{width:1116px;margin:16px auto 0;border-top:2px solid #1e293b;padding-top:15px;display:flex;justify-content:space-between;font-size:16px}.takeaway strong{color:#dc2626}.page{position:absolute;right:82px;bottom:29px;font-size:13px;color:#64748b}
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="holes"><span class="hole"></span><span class="hole"></span><span class="hole"></span></div>
+    <header class="head"><div><div class="kicker">Persistence design</div><h1>The data model preserves the review trail</h1></div><p>Each teacher decision remains connected to the original paper context and the precise evidence region used for review.</p></header>
+    <div class="rule"></div>
+    <section class="model">
+      <div class="link l1"></div><div class="link l2"></div><div class="link l3"></div><span class="arrow a1">→</span><span class="arrow a2">→</span><span class="arrow a3">→</span>
+      <article class="entity"><div class="entity-head"><span>ROOT RECORD</span><h2>Assessment Session</h2></div><div class="fields"><div class="field"><strong>Document metadata</strong><span>question paper + answer sheet names</span></div><div class="field"><strong>Review focus</strong><span>active question + answer page</span></div><div class="field"><strong>Browser owner key</strong><span>no-login private workspace scope</span></div></div></article>
+      <article class="entity"><div class="entity-head"><span>ORDERED CHILDREN</span><h2>Extracted Questions</h2></div><div class="fields"><div class="field"><strong>Printed identity</strong><span>original number and sort order</span></div><div class="field"><strong>Mapping state</strong><span>mapped, review, unanswered, unmatched</span></div><div class="field"><strong>Teacher view</strong><span>suggested score, feedback, decision</span></div></div></article>
+      <article class="entity"><div class="entity-head"><span>SPATIAL EVIDENCE</span><h2>Answer Regions</h2></div><div class="fields"><div class="field"><strong>Page context</strong><span>answer-sheet page number</span></div><div class="field"><strong>Exact rectangle</strong><span>top, left, width, height percentages</span></div><div class="field"><strong>Mapping confidence</strong><span>evidence location quality signal</span></div></div></article>
+      <article class="entity"><div class="entity-head"><span>APPEND-ONLY HISTORY</span><h2>Review Events</h2></div><div class="fields"><div class="field"><strong>Decision</strong><span>approved or adjusted</span></div><div class="field"><strong>Score &amp; note</strong><span>teacher’s recorded judgment</span></div><div class="field"><strong>Timestamp</strong><span>durable review-history record</span></div></div></article>
+      <span class="relationship r1">1 session → many questions</span><span class="relationship r2">1 question → many regions</span><span class="relationship r3">1 question → many events</span>
+    </section>
+    <div class="takeaway"><span><strong>Result:</strong> the mapping is inspectable, revisitable, and tied to the teacher’s decision trail.</span><span>DATABASE-BACKED</span></div>
+    <div class="page">07 / 09</div>
+  </div>
+</body>
+</html>

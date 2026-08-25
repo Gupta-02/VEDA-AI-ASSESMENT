@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Roboto+Slab:wght@800;900&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;box-sizing:border-box}.slide-container{width:1280px;min-height:720px;background:#e2e8f0;color:#1e293b;font-family:'DM Sans',sans-serif;position:relative;padding-top:61px}.holes{position:absolute;top:30px;left:42px;right:42px;display:flex;justify-content:space-between}.hole{width:18px;height:18px;border:2px solid #1e293b;border-radius:50%;background:#e2e8f0}.left{position:absolute;left:82px;top:104px;width:350px}.kicker{font-size:14px;font-weight:700;letter-spacing:1.7px;color:#dc2626;text-transform:uppercase}.left h1{font-family:'Roboto Slab',serif;font-size:42px;line-height:1.12;letter-spacing:-1.5px;margin-top:12px}.rule{height:6px;width:105px;background:#dc2626;margin-top:22px}.left p{font-size:18px;line-height:1.45;color:#475569;margin-top:23px}.legend{border-top:2px solid #1e293b;margin-top:42px;padding-top:16px;font-size:14px;line-height:1.45}.legend strong{color:#dc2626}.matrix{position:absolute;left:480px;top:112px;width:720px;border-top:2px solid #1e293b;border-left:2px solid #1e293b;background:#f8fafc;box-shadow:6px 6px 0 #1e293b}.row{display:grid;grid-template-columns:180px 1fr;min-height:94px;border-right:2px solid #1e293b;border-bottom:2px solid #1e293b}.row:nth-child(5){min-height:102px}.scenario{border-right:2px solid #1e293b;padding:17px 17px 0;font-family:'Roboto Slab',serif;font-size:17px;line-height:1.15}.response{padding:16px 18px 0;display:flex;align-items:flex-start;gap:13px}.mark{width:28px;height:28px;border:2px solid #1e293b;background:#dc2626;color:#fff;flex:none;display:grid;place-items:center;font-size:15px;font-weight:900}.copy h2{font-size:15px;line-height:1.2}.copy p{font-size:13px;color:#475569;line-height:1.35;margin-top:6px}.page{position:absolute;right:81px;bottom:34px;color:#64748b;font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="holes"><span class="hole"></span><span class="hole"></span><span class="hole"></span></div>
+    <section class="left">
+      <div class="kicker">Assessment resilience</div>
+      <h1>Mapping handles the assessment edge cases</h1>
+      <div class="rule"></div>
+      <p>The review experience explicitly separates confident evidence from work that needs teacher attention.</p>
+      <div class="legend"><strong>Principle:</strong> retain the original paper structure, even when the student response does not follow it.</div>
+    </section>
+    <section class="matrix">
+      <div class="row"><div class="scenario">Printed order<br>&amp; sub-parts</div><div class="response"><div class="mark">1</div><div class="copy"><h2>Original labels stay visible</h2><p>`11`, `11 (a)`, and `11 (b)` are independent entries in the extracted question list.</p></div></div></div>
+      <div class="row"><div class="scenario">Out-of-order<br>response</div><div class="response"><div class="mark">2</div><div class="copy"><h2>Evidence can appear later</h2><p>Question order remains fixed while the mapped answer region points to its actual sheet location.</p></div></div></div>
+      <div class="row"><div class="scenario">Unanswered<br>question</div><div class="response"><div class="mark">3</div><div class="copy"><h2>Absence is a clear state</h2><p>An explicit no-answer view prevents a teacher from mistaking missing work for an uncertain mapping.</p></div></div></div>
+      <div class="row"><div class="scenario">Unmatched<br>answer</div><div class="response"><div class="mark">4</div><div class="copy"><h2>Ambiguity is surfaced, not hidden</h2><p>Detected work without a safe question link is retained as an unmatched item for review.</p></div></div></div>
+      <div class="row"><div class="scenario">Multi-page<br>context</div><div class="response"><div class="mark">5</div><div class="copy"><h2>Page references travel with the mapping</h2><p>The answer-sheet context records page number alongside each question and evidence region.</p></div></div></div>
+    </section>
+    <div class="page">05 / 09</div>
+  </div>
+</body>
+</html>

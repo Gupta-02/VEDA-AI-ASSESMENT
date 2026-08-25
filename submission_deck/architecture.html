@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Roboto+Slab:wght@800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; box-sizing: border-box; }
+    .slide-container { width: 1280px; min-height: 720px; background: #E2E8F0; color: #1E293B; font-family: 'DM Sans', sans-serif; position: relative; padding-top: 57px; }
+    .holes { position: absolute; top: 29px; left: 42px; right: 42px; display: flex; justify-content: space-between; }
+    .hole { width: 18px; height: 18px; border: 2px solid #1E293B; border-radius: 50%; background: #E2E8F0; }
+    .header { margin-left: 82px; width: 1117px; display: flex; justify-content: space-between; align-items: flex-end; }
+    .eyebrow { color: #DC2626; font-size: 14px; letter-spacing: 1.8px; font-weight: 700; }
+    h1 { font-family: 'Roboto Slab', serif; font-size: 39px; letter-spacing: -1.4px; margin-top: 10px; }
+    .header p { width: 355px; color: #475569; font-size: 16px; line-height: 1.4; }
+    .rule { width: 1117px; height: 6px; background: #1E293B; margin: 24px auto 0; }
+    .diagram { width: 1117px; margin: 46px auto 0; display: flex; align-items: stretch; justify-content: space-between; }
+    .layer { width: 237px; min-height: 280px; border: 2px solid #1E293B; background: #F8FAFC; position: relative; padding: 23px 19px 0; }
+    .layer-num { color: #DC2626; font-family: 'Roboto Slab', serif; font-size: 32px; line-height: 1; }
+    .layer h2 { font-size: 19px; line-height: 1.12; margin-top: 22px; }
+    .layer p { color: #475569; font-size: 14px; line-height: 1.42; margin-top: 11px; }
+    .detail { position: absolute; left: 19px; right: 19px; top: 206px; border-top: 2px solid #94A3B8; padding-top: 12px; color: #1E293B; font-size: 12px; font-weight: 700; line-height: 1.35; }
+    .arrow { align-self: center; color: #DC2626; font-size: 36px; font-weight: 700; width: 32px; text-align: center; }
+    .bottom { width: 1117px; margin: 40px auto 0; border-top: 2px solid #1E293B; padding-top: 15px; display: flex; gap: 32px; align-items: baseline; }
+    .bottom strong { font-family: 'Roboto Slab', serif; font-size: 19px; color: #DC2626; }
+    .bottom span { color: #475569; font-size: 16px; }
+    .page { position: absolute; right: 81px; bottom: 26px; color: #64748B; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="holes"><span class="hole"></span><span class="hole"></span><span class="hole"></span></div>
+    <header class="header">
+      <div><div class="eyebrow">Implementation architecture</div><h1>Typed architecture separates interface, API, and data</h1></div>
+      <p>Each layer has a narrow responsibility so review interactions remain fast, traceable, and straightforward to extend.</p>
+    </header>
+    <div class="rule"></div>
+    <section class="diagram">
+      <article class="layer"><div class="layer-num">01</div><h2>Teacher workspace</h2><p>React, TypeScript, and Tailwind render the Figma-aligned upload, extraction, library, and evidence-mapping states.</p><div class="detail">File selection · question focus · review action</div></article>
+      <div class="arrow">→</div>
+      <article class="layer"><div class="layer-num">02</div><h2>Typed API contract</h2><p>Express and tRPC expose create, list, load, focus, and review-save operations with shared input validation.</p><div class="detail">Create · list · get · set focus · save review</div></article>
+      <div class="arrow">→</div>
+      <article class="layer"><div class="layer-num">03</div><h2>Durable persistence</h2><p>Drizzle and MySQL/TiDB store sessions, extracted questions, exact answer rectangles, and review-event history.</p><div class="detail">Normalized relational records</div></article>
+      <div class="arrow">→</div>
+      <article class="layer"><div class="layer-num">04</div><h2>Browser ownership</h2><p>An opaque browser owner key scopes saved prototype records without requiring authentication for the assignment flow.</p><div class="detail">No-login access · browser-private history</div></article>
+    </section>
+    <div class="bottom"><strong>Separation of concerns</strong><span>The UI can later connect to a real OCR or vision pipeline without changing the teacher review model.</span></div>
+    <div class="page">06 / 09</div>
+  </div>
+</body>
+</html>

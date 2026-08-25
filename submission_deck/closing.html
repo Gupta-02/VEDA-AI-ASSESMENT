@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Roboto+Slab:wght@800;900&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;box-sizing:border-box}
+    .slide-container{width:1280px;min-height:720px;background:#e2e8f0;color:#1e293b;font-family:'DM Sans',sans-serif;position:relative;padding-top:62px}
+    .holes{position:absolute;top:30px;left:42px;right:42px;display:flex;justify-content:space-between}.hole{width:18px;height:18px;border:2px solid #1e293b;border-radius:50%;background:#e2e8f0}
+    .left{position:absolute;left:82px;top:130px;width:620px}.kicker{font-size:14px;font-weight:700;letter-spacing:1.8px;color:#dc2626}.left h1{font-family:'Roboto Slab',serif;font-size:51px;line-height:1.08;letter-spacing:-2px;margin-top:16px}.rule{height:7px;width:118px;background:#dc2626;margin-top:26px}.left p{font-size:19px;line-height:1.45;color:#475569;margin-top:23px;width:545px}.statement{border-top:2px solid #1e293b;margin-top:41px;padding-top:16px;font-size:17px;line-height:1.4;font-weight:700}.statement strong{color:#dc2626}
+    .scope{position:absolute;right:82px;top:127px;width:390px;border:2px solid #1e293b;background:#f8fafc;box-shadow:6px 6px 0 #1e293b}.scope-head{background:#1e293b;color:#fff;padding:15px 18px;font-size:12px;font-weight:700;letter-spacing:1.4px}.scope-row{min-height:78px;border-top:2px solid #1e293b;padding:15px 17px 0}.scope-row:first-of-type{border-top:0}.scope-row h2{font-size:15px;line-height:1.2}.scope-row p{font-size:12px;line-height:1.38;color:#475569;margin-top:5px}.done{color:#b91c1c;font-weight:800}.next{color:#dc2626;font-weight:800}
+    .actions{position:absolute;left:82px;right:82px;bottom:67px;border-top:2px solid #1e293b;display:flex;padding-top:19px;gap:0}.action{width:33.33%;min-height:91px;border-right:2px solid #1e293b;padding-left:18px}.action:first-child{padding-left:0}.action:last-child{border-right:0}.action span{display:block;font-family:'Roboto Slab',serif;font-size:26px;color:#dc2626}.action h3{font-size:15px;margin-top:5px}.action p{font-size:12px;color:#475569;line-height:1.35;margin-top:4px;width:275px}.page{position:absolute;right:82px;bottom:29px;color:#64748b;font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="holes"><span class="hole"></span><span class="hole"></span><span class="hole"></span></div>
+    <section class="left">
+      <div class="kicker">Submission handoff</div>
+      <h1>Ready as a complete interaction prototype</h1>
+      <div class="rule"></div>
+      <p>The delivered application demonstrates the full teacher review experience: document intake, extraction context, answer mapping, exact evidence highlighting, durable review decisions, and saved assessment history.</p>
+      <div class="statement"><strong>Transparent scope:</strong> the current evidence is structured prototype data; live OCR, handwriting recognition, and source-document byte storage are the next implementation layer.</div>
+    </section>
+    <section class="scope">
+      <div class="scope-head">DELIVERED VS. NEXT</div>
+      <div class="scope-row"><h2 class="done">Delivered now</h2><p>Figma-aligned interface, edge-case states, exact green answer regions, typed API, database records, and no-login persistence.</p></div>
+      <div class="scope-row"><h2 class="next">Next integration</h2><p>Object storage for real PDFs/images plus a vision/OCR service that returns ordered questions and page-relative answer rectangles.</p></div>
+      <div class="scope-row"><h2>Teacher control</h2><p>Add editable scoring, richer comments, and exportable review reports while retaining the evidence trail.</p></div>
+    </section>
+    <section class="actions">
+      <article class="action"><span>01</span><h3>Publish</h3><p>Create a live URL from the latest project checkpoint for the submission form.</p></article>
+      <article class="action"><span>02</span><h3>Export GitHub</h3><p>Create the repository and include this README, architecture, and test instructions.</p></article>
+      <article class="action"><span>03</span><h3>Submit transparently</h3><p>Present the complete interaction workflow and clearly declare the current OCR limitation.</p></article>
+    </section>
+    <div class="page">09 / 09</div>
+  </div>
+</body>
+</html>
